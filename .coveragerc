@@ -1,0 +1,18 @@
+[run]
+branch = True
+source =
+    pico_otel
+omit =
+    */_version.py
+
+[paths]
+pico_otel =
+    src/pico_otel
+    .tox/*/lib/*/site-packages/pico_otel
+    .tox/*/site-packages/pico_otel
+    */site-packages/pico_otel
+
+[report]
+show_missing = True
+omit =
+    */_version.py
