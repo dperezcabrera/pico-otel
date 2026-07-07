@@ -1,4 +1,4 @@
-# 📦 pico-otel
+# pico-otel
 
 [![PyPI](https://img.shields.io/pypi/v/pico-otel.svg)](https://pypi.org/project/pico-otel/)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/dperezcabrera/pico-otel)
