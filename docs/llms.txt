@@ -1,0 +1,23 @@
+# pico-otel
+
+> OpenTelemetry auto-instrumentation for the Pico ecosystem: tracing, metrics and log correlation wired by entry points.
+
+## Docs
+
+- [Home](https://dperezcabrera.github.io/pico-otel/)
+- [Getting Started](https://dperezcabrera.github.io/pico-otel/getting-started/)
+- [Learning Roadmap](https://dperezcabrera.github.io/pico-otel/LEARN/)
+- [Architecture](https://dperezcabrera.github.io/pico-otel/architecture/)
+- [index](https://dperezcabrera.github.io/pico-otel/reference/)
+- [API](https://dperezcabrera.github.io/pico-otel/reference/api/)
+- [AI Coding Skills](https://dperezcabrera.github.io/pico-otel/skills/)
+- [FAQ](https://dperezcabrera.github.io/pico-otel/faq/)
+- [Troubleshooting](https://dperezcabrera.github.io/pico-otel/troubleshooting/)
+- [Changelog](https://dperezcabrera.github.io/pico-otel/CHANGELOG/)
+
+## For agents
+
+- [Full docs in one file](https://dperezcabrera.github.io/pico-otel/llms-full.txt)
+- [AGENTS.md (conventions and boundaries)](https://raw.githubusercontent.com/dperezcabrera/pico-otel/main/AGENTS.md)
+- [Flagship use case (whole ecosystem wired)](https://dperezcabrera.github.io/pico-boot/flagship/)
+- [PyPI](https://pypi.org/project/pico-otel/)
