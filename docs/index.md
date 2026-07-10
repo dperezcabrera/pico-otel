@@ -18,3 +18,5 @@ too, `/actuator/metrics` serves the OTel metrics automatically: probes +
 metrics + tracing from two `pip install`s.
 
 Continue with [Getting Started](getting-started.md).
+
+**See it in context**: the [flagship use case](https://dperezcabrera.github.io/pico-boot/flagship/) wires this module into a full order platform together with the rest of the ecosystem.
