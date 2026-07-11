@@ -1,17 +1,12 @@
 import pytest
-from pico_ioc import DictSource, configuration, init
 
 
 @pytest.fixture
-def make_container():
-    created = []
+def make_container(make_container):
+    """Extends the plugin fixture: kwargs become the otel config section."""
+    plugin_make = make_container
 
     def _make(**otel_cfg):
-        cfg = configuration(DictSource({"otel": otel_cfg, "fastapi": {"title": "t"}}))
-        c = init(modules=["pico_otel"], config=cfg)
-        created.append(c)
-        return c
+        return plugin_make(config={"otel": otel_cfg, "fastapi": {"title": "t"}})
 
-    yield _make
-    for c in created:
-        c.shutdown()
+    return _make

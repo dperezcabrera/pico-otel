@@ -1,3 +1,4 @@
+import pytest
 from fastapi import FastAPI
 from opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
@@ -39,7 +40,10 @@ class Ping:
         return {"pong": True}
 
 
+@pytest.mark.pico_auto_plugins
 def test_fastapi_requests_produce_spans():
+    """Verifies entry-point auto-discovery itself; only reproducible in the
+    isolated tox venv (the shared dev venv drags every installed plugin in)."""
     import sys
 
     exporter = InMemorySpanExporter()
@@ -49,6 +53,7 @@ def test_fastapi_requests_produce_spans():
                 "otel": {"traces_exporter": "none"},
                 "fastapi": {"title": "t"},
                 "celery": {"broker_url": "memory://", "backend_url": "cache+memory://"},
+                "auth_client": {"enabled": False},
             }
         )
     )

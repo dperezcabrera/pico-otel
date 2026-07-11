@@ -82,3 +82,6 @@ max-complexity = 12
 
 [tool.ruff.format]
 quote-style = "double"
+
+[tool.pytest.ini_options]
+pico_module = "pico_otel"
