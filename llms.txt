@@ -1,0 +1,22 @@
+# pico-otel
+
+> OpenTelemetry auto-instrumentation for the Pico ecosystem: tracing, metrics and log correlation wired by entry points.
+
+Install: `pip install pico-otel`. Import surface: `from pico_otel import ...`.
+
+## Public API
+
+- `class OtelSettings` — ``traces_exporter``: ``auto`` (otlp if ``endpoint`` set, else console),
+- `class OtelBootstrap` — Idempotent SDK setup + auto-instrumentation of installed libraries.
+- `class OtelFastApiConfigurer` — Instruments the FastAPI app; collected structurally by pico-fastapi
+
+## Docs
+
+- docs/CHANGELOG.md
+- docs/LEARN.md
+- docs/architecture.md
+- docs/faq.md
+- docs/getting-started.md
+- docs/reference/ (2 pages)
+- docs/skills.md
+- docs/troubleshooting.md
