@@ -27,8 +27,8 @@ classifiers = [
 ]
 
 dependencies = [
-    "pico-ioc >= 2.2.0",
-    "opentelemetry-sdk >= 1.25",
+    "pico-ioc >= 2.3.3",
+    "opentelemetry-sdk >= 1.37",
 ]
 
 [project.optional-dependencies]
