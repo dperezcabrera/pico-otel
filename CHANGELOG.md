@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Documentation
+
+- FastAPI 0.142 ships built-in OpenTelemetry that, with `OTEL_EXPORTER_OTLP_ENDPOINT` set, adds a second OTLP exporter next to pico-otel's. Use pico-fastapi >= 0.4.3 (or `FastAPI(telemetry={"auto_configure": False})`). A regression test pins one exporter and one server span per request against FastAPI >= 0.142.
+
 ## [0.1.1] - 2026-09-29
 
 ### Fixed

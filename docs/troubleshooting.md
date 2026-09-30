@@ -6,6 +6,16 @@
 - The instrumentation extra must be installed (e.g.
   `pico-otel[fastapi]`) — absence is a silent skip (INFO log at startup).
 
+## Every span exported twice (FastAPI >= 0.142)
+
+FastAPI 0.142 ships its own OpenTelemetry integration, on by default. When
+`OTEL_EXPORTER_OTLP_ENDPOINT` is set it appends an OTLP exporter to the global
+providers at startup, on top of the one pico-otel configured. Use pico-fastapi
+>= 0.4.3, which sets `fastapi.telemetry.auto_configure: false` by default. If you
+build the `FastAPI()` app yourself, pass `telemetry={"auto_configure": False}`.
+FastAPI's own spans stay off while pico-otel instruments the app, so a request
+still produces one server span.
+
 ## No metrics at /actuator/metrics
 
 Install `pico-otel[prometheus]` **and** pico-actuator. The meter provider

@@ -36,6 +36,8 @@ otel:
 
 `traces_exporter`: `auto` (OTLP if `endpoint` is set, console otherwise), `otlp`, `console` or `none`. Setup is idempotent per process.
 
+FastAPI 0.142 added built-in OpenTelemetry. With pico-fastapi >= 0.4.3 it records against the providers pico-otel configures and never adds a second exporter; see [Troubleshooting](https://dperezcabrera.github.io/pico-otel/troubleshooting/).
+
 ## Documentation
 
 Full docs at **[dperezcabrera.github.io/pico-otel](https://dperezcabrera.github.io/pico-otel/)**.
