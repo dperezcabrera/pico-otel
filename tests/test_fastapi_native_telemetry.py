@@ -5,6 +5,7 @@ not attach a second exporter (it would when OTEL_EXPORTER_OTLP_ENDPOINT is set).
 import subprocess
 import sys
 import textwrap
+from importlib.metadata import version
 
 import fastapi
 import pytest
@@ -47,6 +48,9 @@ _SCENARIO = """
 
 
 @pytest.mark.skipif(Version(fastapi.__version__) < Version("0.142"), reason="no built-in telemetry")
+@pytest.mark.skipif(
+    Version(version("pico-fastapi")) < Version("0.4.3"), reason="pico-fastapi < 0.4.3 lets FastAPI add its exporter"
+)
 def test_one_exporter_and_one_server_span_per_request_with_native_fastapi_telemetry(tmp_path):
     pytest.importorskip("opentelemetry.exporter.otlp.proto.http")  # what FastAPI would add
     (tmp_path / "otelapp.py").write_text(textwrap.dedent(_APP))
